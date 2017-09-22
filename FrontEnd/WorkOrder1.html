@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script type="text/javascript" src = "WorkOrder1.js"></script>
+        
+       <style>
+            body {
+                background-color: lightblue;
+            }
+
+            button {
+                text-align: center;
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                display: block;
+                padding: 10px 0;
+                margin: 20px auto;
+            }            
+            div {
+                text-align: left;
+                padding: 10px;
+                margin: 20px auto;
+            }          
+        </style>
+    </head>
+
+    <body>
+        <form name ="workOrder1" onloadeddata="loadUser()">
+            <div id="workOrderData">
+
+                <label >Please select the option that BEST describes the location of the issue:</label>
+                <br>
+
+                <input type="radio" name="location" value="inRoom">This issue is in my room<br>
+                <input type="radio" name="location" value="myFloor">This issue is on my floor<br>
+                <input type="radio" name="location" value="inHall">This issue is in my res hall<br>
+                <input type="radio" name="location" value="outside">This issue is outside<br>
+                
+                <button onclick="nextWOPage()">Next Page</button>
+            </div>
+        </form>
+    </body>
+
+</html>

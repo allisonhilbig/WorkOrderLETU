@@ -4,15 +4,17 @@ function checkCredentials() {
 
     var credentialsCorrect = false;
 
-    
-
-    if(!credentialsCorrect) {
+    if(credentialsCorrect) {
         alert("Incorrect log in, please try again");
         document.startLogin.username.value = '';
         document.startLogin.pswd.value = '';
     }
     else {
-        window.location = 'http://wol.letu.edu/newurl';
-    }
+        window.location.href = 'file:///C:/Users/Allison/Documents/_College/_7%20Semester/Software%20Engineering%20II/WorkOrderLETU/FrontEnd/MainMenu.html';
+}
+
+}
+
+function createUser() {
 
 }

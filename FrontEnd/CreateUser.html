@@ -1,7 +1,7 @@
 <html>
     
         <head>
-            <script type="text/javascript" src = "StartLogin.js"></script>
+            <script type="text/javascript" src = "CreateUser.js"></script>
             <style>
             body {
                 background-color: lightblue;
@@ -34,23 +34,27 @@
         </head>
     
         <body>
-            <form name ="startLogin">
+            <form name ="createUser">
                 <div id="logo">
                     <img src="logoTransparent.png" alt="WOLetu">
                 </div>
                 
-                <button onclick="createUser()">Create WOL Account</button>
-                
+                                
                 <div id="credentials">
                     <label for="username">Username:</label><br>
                     <input type="text" id="username"><br>
 
+                    <label for="email">LETU Email:</label><br>
+                    <input type="text" id="email"><br>
+
                     <label for="pswd">Password:</label><br>
                     <input type="password" id="pswd"><br>
 
+                    <label for="pswd1">Confirm Password:</label><br>
+                    <input type="password1" id="pswd1"><br>
                     
                 </div>
-                <button onclick="checkCredentials()">Log In</button>
+                <button onclick="checkCredentials()">Create Account</button>
                 </form>
         </body>
     
