@@ -15,7 +15,7 @@ class InfoFromDatabase:
         # pull from Db
         # this is currently filler
         msg = "Thank you!"
-
+        #cur.execute("""select * from pytable""") <--- example for syntax
         return msg
 
     def getFromAddr(self):
