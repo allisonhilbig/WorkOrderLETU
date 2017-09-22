@@ -3,7 +3,7 @@ import mysql.connector
 
 # connect to MySQL database
 con = mysql.connector.connect(user='sw2proj',password='password',host='cs-lab.letu.edu',database='sw2projdb')
-cursor = con.cursor
+cur = con.cursor()
 
 class InfoFromDatabase:
 
@@ -16,6 +16,7 @@ class InfoFromDatabase:
         # this is currently filler
         msg = "Thank you!"
         #cur.execute("""select * from pytable""") <--- example for syntax
+        #msg = cur.fetch__ idk
         return msg
 
     def getFromAddr(self):
