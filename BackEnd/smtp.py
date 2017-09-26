@@ -50,6 +50,7 @@ class SMTP:
             print '250 reply not received from server.'
 
     # Send DATA command and print server response.
+    # 250 means email address exists on that server
     def sendDataCmd(self):
         dataCmd = 'DATA\r\n'
         SMTP.clientSocket.send(dataCmd)
@@ -57,6 +58,17 @@ class SMTP:
         print recv4
         if recv4[:3] != '250':
             print '250 reply not received from server.'
+
+    def emailVerify(self):
+        trueEmail = False
+        dataCmd = 'DATA\r\n'
+        SMTP.clientSocket.send(dataCmd)
+        isEmailReal = SMTP.clientSocket.recv(1024)[:3]
+        if(isEmailReal == 250):
+            trueEmail = True
+        else:
+            trueEmail = False
+        return trueEmail
 
     # add subject
     def addSubjectCmd(self, subject):
