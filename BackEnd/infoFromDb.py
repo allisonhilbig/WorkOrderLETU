@@ -11,12 +11,10 @@ class InfoFromDatabase:
         # don't know if this is necessary, but it'll stay here in case it is
         pass
 
-    def getMsg(self):
+    def getMsg(self, idWorkOrder):
         # pull from Db
         # this is currently filler
-        msg = "This prototype works."
-        #cur.execute("""select * from pytable""") <--- example for syntax
-        #msg = cur.fetch__ idk
+        msg = cur.execute("""SELECT Description FROM 'Work Order' WHERE idWorkOrder = '{}'""").format(idWorkOrder)
         return msg
 
     def getFromAddr(self):
