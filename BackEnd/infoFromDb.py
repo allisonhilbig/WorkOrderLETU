@@ -2,7 +2,7 @@ import MySQLdb
 import mysql.connector
 
 # connect to MySQL database
-con = mysql.connector.connect(user='sw2proj',password='password',host='cs-lab.letu.edu',database='sw2projdb')
+con = mysql.connector.connect(user='sw2proj',password='password',host='localhost',database='sw2projdb')
 cur = con.cursor()
 
 class InfoFromDatabase:
