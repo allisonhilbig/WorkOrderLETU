@@ -14,10 +14,10 @@ class InfoFromDatabase:
     def getSubject(self, idPreference, idWorkOrder):
         # pull from Db
         # hall, room number, description
-        subject1 = str(cur.execute("""SELECT resHall FROM 'Preference' WHERE idPreference = '{}'""").format(idPreference))
-        subject2 = str(cur.execute("""SELECT roomNumber FROM 'Preference' WHERE idPreference = '{}'""").format(idPreference))
-        subject3 = str(cur.execute("""SELECT Description FROM 'Work Order' WHERE idWorkOrder = '{}'""").format(idWorkOrder))
-        subject = subject1 + subject2 + subject3
+        subjectHall = str(cur.execute("""SELECT resHall FROM 'Preference' WHERE idPreference = '{}'""").format(idPreference))
+        subjectRN = str(cur.execute("""SELECT roomNumber FROM 'Preference' WHERE idPreference = '{}'""").format(idPreference))
+        subjectDesc = str(cur.execute("""SELECT Description FROM 'Work Order' WHERE idWorkOrder = '{}'""").format(idWorkOrder))
+        subject = subjectHall + subjectRN + subjectDesc
         return subject
 
     def getFromAddr(self, idPreference):
