@@ -2,7 +2,7 @@ from socket import *
 from infoFromDb import InfoFromDatabase
 
 class SMTP:
-    
+
     endmsg = "\r\n.\r\n"
     info = InfoFromDatabase()
 
@@ -13,9 +13,6 @@ class SMTP:
     clientSocket.connect(mailserver)
 
     recv = clientSocket.recv(1024)
-    print recv
-    if recv[:3] != '220':
-        print '220 reply not received from server.'
 
     # Write message
     def writeMsg(self, message):
@@ -66,8 +63,10 @@ class SMTP:
         isEmailReal = SMTP.clientSocket.recv(1024)[:3]
         if(isEmailReal == 250):
             trueEmail = True
+            print('Good Email')
         else:
             trueEmail = False
+            print('Bad Email')
         return trueEmail
 
     # add subject
@@ -82,6 +81,7 @@ class SMTP:
         self.mailFromCmd(fromAddr)
         self.rcptToCmd(toAddr)
         self.sendDataCmd()
+        # self.emailVerify()                    # don't know if this is necessary, looks like something in mailFromCmd()
         self.addSubjectCmd(subject)
 
         # Send message data.
@@ -99,16 +99,6 @@ class SMTP:
             print '250 reply not received from server.'
 
 if __name__ == "__main__":
-    endmsg = "\r\n.\r\n"
-    info = InfoFromDatabase()
-
-    # Choose a mail server (e.g. Google mail server) and call it mailserver
-    mailserver = ("smtp.letu.edu", 25)
-    #  Create socket called clientSocket and establish a TCP connection with mailserver
-    clientSocket = socket(AF_INET, SOCK_STREAM)
-    clientSocket.connect(mailserver)
-
-    recv = clientSocket.recv(1024)
     print recv
     if recv[:3] != '220':
         print '220 reply not received from server.'
