@@ -17,7 +17,7 @@ class InfoFromDatabase:
         subjectHall = str(cur.execute("""SELECT resHall FROM 'Preference' WHERE idPreference = '{}'""").format(idPreference))
         subjectRN = str(cur.execute("""SELECT roomNumber FROM 'Preference' WHERE idPreference = '{}'""").format(idPreference))
         subjectDesc = str(cur.execute("""SELECT Description FROM 'Work Order' WHERE idWorkOrder = '{}'""").format(idWorkOrder))
-        subject = subjectHall + subjectRN + subjectDesc
+        subject = subjectHall + " " + subjectRN + " " + subjectDesc
         return subject
 
     def getFromAddr(self, idPreference):
