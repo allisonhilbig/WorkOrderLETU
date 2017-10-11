@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'sw2projdb',
         'USER': 'sw2proj',
         'PASSWORD': 'password',
-        'HOST': 'cs-lab.letnet.net/',   # Or an IP Address that your DB is hosted on
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }

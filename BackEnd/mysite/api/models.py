@@ -29,9 +29,9 @@ class WorkOrder(models.Model):
     Description = models.TextField(max_length=45)
     preferencesID = models.ForeignKey(Preference, on_delete=models.CASCADE)
 
-    class Meta:
-        model = Preference
-        fields = ['name','raEmail','rdEmail']
+    #class Meta:
+    #    model = Preference
+    #    fields = ['name','raEmail','rdEmail']
 
 
 
