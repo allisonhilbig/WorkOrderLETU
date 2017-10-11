@@ -63,8 +63,10 @@ class SMTP:
         isEmailReal = SMTP.clientSocket.recv(1024)[:3]
         if(isEmailReal == 250):
             trueEmail = True
+            print('Good Email')
         else:
             trueEmail = False
+            print('Bad Email')
         return trueEmail
 
     # add subject
@@ -79,6 +81,7 @@ class SMTP:
         self.mailFromCmd(fromAddr)
         self.rcptToCmd(toAddr)
         self.sendDataCmd()
+        # self.emailVerify()                    # don't know if this is necessary, looks like something in mailFromCmd()
         self.addSubjectCmd(subject)
 
         # Send message data.
