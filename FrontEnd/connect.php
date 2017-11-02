@@ -19,7 +19,7 @@ $result = mysqli_query($db, $query);
 $row = mysqli_fetch_array($result);
 
 while ($row = mysqli_fetch_array($result)) {
- echo $row['name'] . ' ' . $row['userEmail'] . ': ' . $row['raEMail'] . ' ' . $row['resHall'] .'<br />';
+ echo $row['name'];
 }
 ?>
 
