@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script 
+            type="text/javascript" 
+            src="WorkOrder2.js"
+            window.location.href="cs-lab.letu.edu/~sw2proj/WorkOrder2.html"
+        ></script>
+
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="css/StandardStyle.css">
+    </head>
+
+    <body>
+        <form name ="workOrder2" onloadeddata="displayFields()">
+            <div id="workOrderData">
+
+                <label id="issue">Briefly describe issue, and the location using cardinal (N,E,S,W) directions:</label>
+                <input type="text" name="issue" maxlength="100">
+                <br>
+                <a href="WorkOrder1.html" class="btn btn-default" role="button">Sign up</a>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+                <label id="issue">Add photo if helpful (optional):</label>
+                <input id="image-file" type="file">
+                <br>
+                <button onclick="window.location='http://cs-lab.letu.edu/~sw2proj/StartLogin.html'">Submit to your RA</button>
+            </div>
+        </form>
+    </body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script 
+            type="text/javascript" 
+            src="StartLogin.js"
+        ></script>
+        <link rel="stylesheet" href="css/StandardStyle.css">
+    </head>
+
+    <body>
+        <form name ="startLogin">
+            <div id="logo">
+                <img src="logoTransparent.png" alt="WOLetu">
+                <br>
+                <label for="logo">Welcome to Work Order LETU!</label>
+            </div>
+            <button onclick="createUser()">Create WOL Account</button>
+            
+            <div id="credentials">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username"><br>
+
+                <label for="pswd">Password:</label><br>
+                <input type="password" id="pswd"><br>
+            </div>                
+        </form>
+
+        <button type="button">Log In</button>
+    </body>
+
+    </html>

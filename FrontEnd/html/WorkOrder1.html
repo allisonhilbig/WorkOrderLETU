@@ -1,26 +1,12 @@
 <html>
     <head>
-        <script type="text/javascript" src = "WorkOrder1.js"></script>
+        <script 
+            type="text/javascript" 
+            src="WorkOrder1.js" 
+            window.location.href="cs-lab.letu.edu/~sw2proj/WorkOrder1.html"
+        ></script>
         
-       <style>
-            body {
-                background-color: lightblue;
-            }
-
-            button {
-                text-align: center;
-                width: 100%;
-                max-width: 300px;
-                height: auto;
-                display: block;
-                padding: 10px 0;
-                margin: 20px auto;
-            }            
-            div {
-                text-align: left;
-                padding: 10px;
-                margin: 20px auto;
-            }          
+        <link rel="stylesheet" href="css/StandardStyle.css">   
         </style>
     </head>
 
@@ -35,7 +21,7 @@
                 <input type="radio" name="location" value="myFloor">This issue is on my floor<br>
                 <input type="radio" name="location" value="inHall">This issue is in my res hall<br>
                 <input type="radio" name="location" value="outside">This issue is outside<br>
-                
+
                 <button onclick="nextWOPage()">Next Page</button>
             </div>
         </form>

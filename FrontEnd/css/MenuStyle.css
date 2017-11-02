@@ -1,0 +1,35 @@
+body {
+    background-color: lightblue;
+}
+button {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    padding: 10px 0;
+    margin: 20px auto;
+}
+label {
+    text-align: right;
+    font-size: 16px;
+    font-family: Helvetica;
+}
+div {
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+}
+img {
+    max-width: 214;
+    max-height: 170;
+}
+input {
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+    height:  auto;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+}
