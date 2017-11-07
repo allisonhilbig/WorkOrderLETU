@@ -2,18 +2,18 @@
         <head>
             <script 
                 type="text/javascript" 
-                src="SettingsPage.js"
+                src="../FrontEnd/scripts/SettingsPage.js"
                 window.location.href="cs-lab.letu.edu/~sw2proj/SettingPage.html"
             ></script>
             
-            <link rel="stylesheet" href="../css/MenuStyle.css">
+            <link rel="stylesheet" href="../FrontEnd/css/MenuStyle.css">
             </style>
         </head>
 
         <body>
             <form name ="updateSettings" onloadeddata="loadUser()">
                 <div id="settings">
-                    <img src="../../Images/logoTransparent.png" alt="WOLetu">
+                    <img src="../Images/logoTransparent.png" alt="WOLetu">
                     <br>
                     <label id="userEmail">Your Email Address</label>
                     <input type="text"></input>
@@ -36,8 +36,10 @@
                     <label id="rdEmail">Your RD's Email Address</label>
                     <input type="text"></input>
                     <br>
-                    <button onclick="saveAndExit()">Save and Exit</button>
                 </div>
+            </form>
+            <form action="http://cs-lab.letu.edu/~sw2proj/MainMenu.html">
+                <input type="submit" value="Save and Exit">
             </form>
         </body>
     

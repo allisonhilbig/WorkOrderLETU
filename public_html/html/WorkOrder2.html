@@ -2,13 +2,13 @@
     <head>
         <script 
             type="text/javascript" 
-            src="WorkOrder2.js"
+            src="../FrontEnd/scripts/WorkOrder2.js"
             window.location.href="cs-lab.letu.edu/~sw2proj/WorkOrder2.html"
         ></script>
 
         <meta charset="utf-8">
 
-        <link rel="stylesheet" href="../css/StandardStyle.css">
+        <link rel="stylesheet" href="../FrontEnd/css/StandardStyle.css">
     </head>
 
     <body>
@@ -24,8 +24,11 @@
                 <label id="issue">Add photo if helpful (optional):</label>
                 <input id="image-file" type="file">
                 <br>
-                <button onclick="window.location='http://cs-lab.letu.edu/~sw2proj/StartLogin.html'">Submit to your RA</button>
+                
             </div>
+        </form>
+        <form onclick="alert('Completed')" action="http://cs-lab.letu.edu/~sw2proj/MainMenu.html">
+            <input type="submit" value="Submit to your RA">
         </form>
     </body>
 
