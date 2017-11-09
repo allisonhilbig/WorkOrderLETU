@@ -3,24 +3,22 @@
             <script 
                 type="text/javascript" 
                 src="../FrontEnd/scripts/SettingsPage.js"
-                window.location.href="cs-lab.letu.edu/~sw2proj/SettingPage.html"
             ></script>
             
             <link rel="stylesheet" href="../FrontEnd/css/MenuStyle.css">
             </style>
         </head>
-
         <body>
-            <form name ="updateSettings" onloadeddata="loadUser()">
+                <form action="http://cs-lab.letu.edu/~sw2proj/html/MainMenu.html">
                 <div id="settings">
                     <img src="../Images/logoTransparent.png" alt="WOLetu">
                     <br>
                     <label id="userEmail">Your Email Address</label>
                     <input type="text"></input>
                     <br>
-
-                    <!--Dropdown box for res halls-->
-
+                    <label id="resHall">Your Residential Hall</label>
+                    <input type="text"></input>
+                    <br>
                     <label id="roomNumer">Your Room Number</label>
                     <input type="text"></input>
                     <br>
@@ -37,10 +35,7 @@
                     <input type="text"></input>
                     <br>
                 </div>
-            </form>
-            <form action="http://cs-lab.letu.edu/~sw2proj/MainMenu.html">
-                <input type="submit" value="Save and Exit">
+             <input type="submit" value="Save and Exit">
             </form>
         </body>
-    
     </html>

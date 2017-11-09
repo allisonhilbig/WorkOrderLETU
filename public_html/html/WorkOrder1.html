@@ -6,7 +6,7 @@
             window.location.href="cs-lab.letu.edu/~sw2proj/WorkOrder1.html"
         ></script>
         
-        <link rel="stylesheet" href="../FrontEnd/css/StandardStyle.css">   
+        <link rel="stylesheet" href="../FrontEnd/css/WorkOrderStyle.css">   
         </style>
     </head>
 
@@ -17,15 +17,19 @@
                 <label >Please select the option that BEST describes the location of the issue:</label>
                 <br>
 
-                <input type="radio" name="location" value="inRoom">This issue is in my room<br>
-                <input type="radio" name="location" value="myFloor">This issue is on my floor<br>
-                <input type="radio" name="location" value="inHall">This issue is in my res hall<br>
-                <input type="radio" name="location" value="outside">This issue is outside<br>
+                <input type="radio" name="location" id="room" value="inRoom"/>
+                <label for="room">This issue is in my room</label><br>
+                <input type="radio" name="location" id="floor" value="myFloor"/>
+                <label for="floor">This issue is on my floor</label><br>
+                <input type="radio" name="location" id="hall" value="inHall"/>
+                <label for="hall">This issue is in my res hall</label><br>
+                <input type="radio" name="location" id="out" value="outside"/>
+                <label for="out">This issue is outside</label><br>
 
 
             </div>
         </form> 
-        <form action="http://cs-lab.letu.edu/~sw2proj/WorkOrder2.html">
+        <form action="http://cs-lab.letu.edu/~sw2proj/html/WorkOrder2.html">
             <input type="submit" value="Next Page">
         </form>
     </body>

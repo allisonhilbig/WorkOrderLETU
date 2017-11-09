@@ -3,35 +3,34 @@
         <script 
             type="text/javascript" 
             src="../FrontEnd/scripts/CreateUser.js"
-            window.location.href="cs-lab.letu.edu/~sw2proj/CreateUser.html"
         ></script>
 
         <link rel="stylesheet" href="../FrontEnd/css/StandardStyle.css">
     </head>
 
     <body>
-        <form name ="createUser">
+        <form>
             <div id="logo">
                 <img src="../Images/logoTransparent.png" alt="WOLetu">
-            </div>
-                                
+            </div> 
+        </form>
+        <form action="http://cs-lab.letu.edu/~sw2proj/html/StartLogin.html"-->
+            <input type="button" class="cancelbtn" value="Back to Log In">
+        </form>
+        <form name="form1"><!--  method="POST" name="createUser" action="/CreateUser.php"-->
             <div id="credentials">
                 <label for="username">Username:</label><br>
-                <input type="text" id="username"><br>
+                <input type="text" id="username" required><br>
 
                 <label for="email">LETU Email:</label><br>
-                <input type="text" id="email"><br>
+                <input type="text" id="email" required><br>
 
                 <label for="pswd">Password:</label><br>
-                <input type="password" id="pswd"><br>
-
-                <label for="pswd1">Confirm Password:</label><br>
-                <input type="password" id="pswd1"><br>
-                
+                <input type="password" id="pswd" required><br>
             </div>
-        </form>
-        <form onclick="alert('Please check your email to confirm your account!')" action="http://cs-lab.letu.edu/~sw2proj/StartLogin.html">
-            <input type="submit" value="Create Account">
+        <!--</form>
+        <form  onclick="alert('Last step: Please confirm your email using the email sent to you now!')" action="http://cs-lab.letu.edu/~sw2proj/html/StartLogin.html">-->
+            <input type="button" id="signupbtn" value="Create Account">
         </form>
     </body>  
 </html>

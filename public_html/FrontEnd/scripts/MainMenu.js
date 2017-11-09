@@ -1,5 +1,3 @@
-
-
 function createWorkOrder() {
     window.location.replace("cs-lab.letu.edu/~sw2proj/WorkOrder1.html");
 }
