@@ -3,8 +3,11 @@
  $mysqli = mysqli_connect('localhost','sw2proj','password','sw2projdb')
  or die('Error connecting to MySQL server.');
 
-
+//Get data from client side, uname, pword
 //Step2
+$uname = $_POST['uname'];
+$pword = $_POST['pword'];
+
 $query = "SELECT userEmail FROM Preference WHERE name = 'annjones'";
 $result = $mysqli->query($query);
 
@@ -27,6 +30,4 @@ echo json_encode($result);
 
 $mysqli->close();
 
-?>php
-
-exit;
+?>
