@@ -2,31 +2,27 @@
 //Step1
  $mysqli = mysqli_connect('localhost','sw2proj','password','sw2projdb')
  or die('Error connecting to MySQL server.');
+?>
 
+<html>
+ <head>
+ <  /head>
+ <body>
+ <h1>PHP connect to MySQL</h1>
 
+<?php
 //Step2
 $query = "SELECT userEmail FROM Preference WHERE name = 'annjones'";
 $result = $mysqli->query($query);
+$row = $result->fetch_array(MYSQLI_NUM);
+printf ("%s (%s)\n", $row[0]);
 
 $row = mysqli_fetch_array($result);
 
 $str = implode(" ",$row);
 echo $str;
 
-/* If results from database push to result array */
-if ($result->num_rows > 0)
-{
-    while($row = $result->fetch_assoc())
-    {
-       array_push($result, $row);
-    }
-}
+?>
 
-/*send JSON encoded array */
-echo json_encode($result);
-
-$mysqli->close();
-
-?>php
-
-exit;
+</body>
+</html>
