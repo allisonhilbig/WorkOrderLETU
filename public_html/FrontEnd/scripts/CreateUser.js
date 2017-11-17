@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("#signupbtn").on('click', function(e){
         e.preventDefault();
         $.ajax({method: "POST",
-                url: "createuser.php",
+                url: "../php/createUser.php",
                 data: { id: $("#createAccount").val(), 
                         username: $("#username").val(),
                         email: $("#email").val(),

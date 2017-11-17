@@ -29,3 +29,26 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $("#signupbtn").on('click', function(e){
+        e.preventDefault();
+        $.ajax({method: "POST",
+                url: "login.php",
+                data: { "id": $("#login").val(), 
+                        "uname": $("#username").val(),
+                        "pword": $("#pswd").val()}
+        }).done(function(data){
+            var result = $.parseJSON(data);
+          
+            if(result==1){
+                str='Please check email account for confirmation email.';
+            } else if(result==2) {
+                str='All fields are required.';
+            } else {
+                str='Error: Please try again.';
+            }
+
+            alert(str);
+        });      
+    });
+});

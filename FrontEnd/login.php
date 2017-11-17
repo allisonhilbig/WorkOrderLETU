@@ -4,8 +4,8 @@
 //Step1
  if($_SERVER["REQUEST_METHOD"] == "POST")
  {
-	$uname = mysqli_real_escape_string($mysqli,$_POST['uname'];
-	$pword = mysqli_real_escape_string($mysqli,$_POST['pword'];
+	$uname = mysqli_real_escape_string($mysqli,$_POST['uname']);
+	$pword = mysqli_real_escape_string($mysqli,$_POST['pword']);
  
 //Step2
 $sql = "SELECT idPreference FROM Preference WHERE name = '$uname' and password = $'pword'";
